@@ -1,1 +1,0 @@
-"""Logical-tick recovery verification."""
