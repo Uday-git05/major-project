@@ -1,0 +1,76 @@
+{
+  "schema_version": "2.0",
+  "created_utc": "2026-09-24T15:44:15.333981+00:00",
+  "source_dataset": "Farm-Flows.csv",
+  "deployment_feature_count": 27,
+  "deployment_features": [
+    "missed_bytes",
+    "orig_pkts",
+    "orig_ip_bytes",
+    "resp_pkts",
+    "resp_ip_bytes",
+    "fwd_pkts_per_sec",
+    "bwd_pkts_per_sec",
+    "flow_pkts_per_sec",
+    "down_up_ratio",
+    "fwd_header_size_tot",
+    "fwd_header_size_min",
+    "fwd_header_size_max",
+    "bwd_header_size_tot",
+    "bwd_header_size_min",
+    "bwd_header_size_max",
+    "fwd_pkts_payload.tot",
+    "fwd_pkts_payload.avg",
+    "bwd_pkts_payload.tot",
+    "bwd_pkts_payload.avg",
+    "flow_pkts_payload.tot",
+    "flow_pkts_payload.avg",
+    "fwd_iat.tot",
+    "fwd_iat.avg",
+    "bwd_iat.tot",
+    "bwd_iat.avg",
+    "flow_iat.tot",
+    "flow_iat.avg"
+  ],
+  "binary_target": "is_attack",
+  "multiclass_target": "traffic",
+  "traffic_class_mapping": {
+    "0": "Arp_Spoofing",
+    "1": "HTTP_Flood",
+    "2": "ICMP_Flood",
+    "3": "MQTT_Flood",
+    "4": "Normal",
+    "5": "Port_Scanning",
+    "6": "TCP_Flood",
+    "7": "UDP_Flood"
+  },
+  "excluded_raw_class": "BotNet_DDOS",
+  "engineered_feature_decision": {
+    "official_prepared_features": [
+      "pkts_difference",
+      "data_pkts_difference"
+    ],
+    "exact_published_formulas": "not sufficiently documented for reproducible live implementation",
+    "tested_candidate_pkts_difference": "fwd_pkts_tot - bwd_pkts_tot",
+    "tested_candidate_data_pkts_difference": "fwd_data_pkts_tot - bwd_data_pkts_tot",
+    "candidate_test_result": "No reduction in duplicate-feature ambiguity and no increase in empirical multiclass ceiling.",
+    "deployment_decision": "Do not use unverified engineered features in reproducible deployment pipeline."
+  },
+  "benchmark_policy": {
+    "official_29_feature_files": "Retained separately for official Farm-Flow benchmark experiments.",
+    "reproducible_raw_pipeline": "Uses 27 verified raw-derived features."
+  },
+  "leakage_rules": {
+    "binary_input_excludes": [
+      "is_attack",
+      "traffic",
+      "traffic_name"
+    ],
+    "multiclass_input_excludes": [
+      "traffic",
+      "is_attack",
+      "traffic_name"
+    ],
+    "identical_feature_vectors": "Must not be shared across train and evaluation."
+  }
+}

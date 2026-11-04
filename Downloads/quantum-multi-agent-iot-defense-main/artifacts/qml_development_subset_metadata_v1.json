@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "random_state": 42,
+  "source_policy": "QML development subsets were sampled only from the existing leakage-safe TRAIN and VALIDATION partitions.",
+  "binary": {
+    "train_per_class": 1500,
+    "train_total": 3000,
+    "validation_per_class": 500,
+    "validation_total": 1000
+  },
+  "multiclass": {
+    "train_per_class": 400,
+    "train_total": 3200,
+    "validation_per_class": 150,
+    "validation_total": 1200
+  },
+  "sampling": "balanced_without_replacement",
+  "test_used": false,
+  "important_comparison_policy": "QML performance must be compared with classical baselines trained and evaluated on the same QML subsets and representation."
+}

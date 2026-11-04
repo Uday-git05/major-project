@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+
+# Logs
+*.log
+logs/
+
+# Coverage
+coverage/
+htmlcov/
+.coverage
+
+# IDE
+.vscode/
+.idea/
+
+# Windows / OS
+Thumbs.db
+.DS_Store
+
+# Large generated datasets
+splits/*.csv
+processed/*.csv
+
+# Temporary files
+*.tmp
+*.temp/splits/*.csv
+/processed/*.csv

@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "created_utc": "2026-09-24T15:25:53.518970Z",
+  "source_dataset": "Farm-Flows.csv",
+  "raw_feature_count": 27,
+  "engineered_feature_count": 2,
+  "final_feature_count": 29,
+  "raw_features": [
+    "missed_bytes",
+    "orig_pkts",
+    "orig_ip_bytes",
+    "resp_pkts",
+    "resp_ip_bytes",
+    "fwd_pkts_per_sec",
+    "bwd_pkts_per_sec",
+    "flow_pkts_per_sec",
+    "down_up_ratio",
+    "fwd_header_size_tot",
+    "fwd_header_size_min",
+    "fwd_header_size_max",
+    "bwd_header_size_tot",
+    "bwd_header_size_min",
+    "bwd_header_size_max",
+    "fwd_pkts_payload.tot",
+    "fwd_pkts_payload.avg",
+    "bwd_pkts_payload.tot",
+    "bwd_pkts_payload.avg",
+    "flow_pkts_payload.tot",
+    "flow_pkts_payload.avg",
+    "fwd_iat.tot",
+    "fwd_iat.avg",
+    "bwd_iat.tot",
+    "bwd_iat.avg",
+    "flow_iat.tot",
+    "flow_iat.avg"
+  ],
+  "engineered_features": {
+    "pkts_difference": {
+      "status": "formula_pending_validation",
+      "candidate_source_columns": [
+        "fwd_pkts_tot",
+        "bwd_pkts_tot"
+      ]
+    },
+    "data_pkts_difference": {
+      "status": "formula_pending_validation",
+      "candidate_source_columns": [
+        "fwd_data_pkts_tot",
+        "bwd_data_pkts_tot"
+      ]
+    }
+  },
+  "final_feature_order": [
+    "missed_bytes",
+    "orig_pkts",
+    "orig_ip_bytes",
+    "resp_pkts",
+    "resp_ip_bytes",
+    "fwd_pkts_per_sec",
+    "bwd_pkts_per_sec",
+    "flow_pkts_per_sec",
+    "down_up_ratio",
+    "fwd_header_size_tot",
+    "fwd_header_size_min",
+    "fwd_header_size_max",
+    "bwd_header_size_tot",
+    "bwd_header_size_min",
+    "bwd_header_size_max",
+    "fwd_pkts_payload.tot",
+    "fwd_pkts_payload.avg",
+    "bwd_pkts_payload.tot",
+    "bwd_pkts_payload.avg",
+    "flow_pkts_payload.tot",
+    "flow_pkts_payload.avg",
+    "fwd_iat.tot",
+    "fwd_iat.avg",
+    "bwd_iat.tot",
+    "bwd_iat.avg",
+    "flow_iat.tot",
+    "flow_iat.avg",
+    "pkts_difference",
+    "data_pkts_difference"
+  ],
+  "targets": {
+    "binary": "is_attack",
+    "multiclass": "traffic"
+  },
+  "leakage_rules": {
+    "binary_model_exclude": [
+      "is_attack",
+      "traffic"
+    ],
+    "multiclass_model_exclude": [
+      "traffic",
+      "is_attack"
+    ]
+  },
+  "updated_utc": "2026-09-24T15:27:24.997645+00:00",
+  "traffic_class_mapping": {
+    "0": "Arp_Spoofing",
+    "1": "HTTP_Flood",
+    "2": "ICMP_Flood",
+    "3": "MQTT_Flood",
+    "4": "Normal",
+    "5": "Port_Scanning",
+    "6": "TCP_Flood",
+    "7": "UDP_Flood"
+  },
+  "excluded_raw_traffic_classes": [
+    "BotNet_DDOS"
+  ],
+  "preprocessing_evidence": {
+    "published_dataset_pipeline": [
+      "outlier handling",
+      "Z-score normalization",
+      "feature engineering",
+      "undersampling",
+      "oversampling"
+    ],
+    "engineered_features_named_by_authors": [
+      "pkts_difference",
+      "data_pkts_difference"
+    ],
+    "exact_engineered_feature_formulas": "not explicitly documented in available paper"
+  }
+}

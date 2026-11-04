@@ -1,0 +1,66 @@
+{
+  "model": "Multiclass Logistic Regression \u2014 FINAL TEST",
+  "accuracy": 0.6314988099989652,
+  "balanced_accuracy": 0.5895652126429498,
+  "macro_precision": 0.6153341114445091,
+  "macro_recall": 0.5895652126429498,
+  "macro_f1": 0.48849554342456725,
+  "weighted_f1": 0.6030420970752375,
+  "per_class": {
+    "0": {
+      "name": "Arp_Spoofing",
+      "precision": 0.06262085378551242,
+      "recall": 0.946067415730337,
+      "f1": 0.11746651785714286
+    },
+    "1": {
+      "name": "HTTP_Flood",
+      "precision": 0.9812244301578025,
+      "recall": 0.9978454680534918,
+      "f1": 0.9894651539708266
+    },
+    "2": {
+      "name": "ICMP_Flood",
+      "precision": 0.02620689655172414,
+      "recall": 0.0059561128526645765,
+      "f1": 0.009706257982120051
+    },
+    "3": {
+      "name": "MQTT_Flood",
+      "precision": 0.3706300407250659,
+      "recall": 0.9431822800243853,
+      "f1": 0.5321485897729878
+    },
+    "4": {
+      "name": "Normal",
+      "precision": 0.9707525468287874,
+      "recall": 0.7161212121212122,
+      "f1": 0.82421875
+    },
+    "5": {
+      "name": "Port_Scanning",
+      "precision": 0.9920382165605095,
+      "recall": 0.7230523719715654,
+      "f1": 0.8364521272132248
+    },
+    "6": {
+      "name": "TCP_Flood",
+      "precision": 0.8223587942639743,
+      "recall": 0.28170426065162907,
+      "f1": 0.41965352449223414
+    },
+    "7": {
+      "name": "UDP_Flood",
+      "precision": 0.6968411126826969,
+      "recall": 0.10259257973831257,
+      "f1": 0.1788534261080018
+    }
+  },
+  "selection_metric": "validation_macro_f1",
+  "validation_macro_f1": 0.473169,
+  "test_inference_seconds": 0.019870758056640625,
+  "evaluation_dataset": "untouched_test",
+  "feature_count": 27,
+  "class_weight": "balanced",
+  "scaled": true
+}

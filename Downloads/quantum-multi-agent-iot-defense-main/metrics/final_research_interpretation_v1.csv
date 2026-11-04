@@ -1,0 +1,8 @@
+Finding,Evidence
+QML feature preservation,"All 27 reproducible deployment features were standardized, L2-normalized and zero-padded to 32 amplitudes. No original feature was discarded."
+Quantum encoding,Amplitude encoding represented the 32-dimensional padded vector using 5 qubits because 2^5 = 32.
+Binary classical production result,XGBoost achieved Macro F1 0.9538 on the full leakage-safe Test set.
+Binary QML result,5-qubit QML achieved Macro F1 0.9610 on the matched controlled Test set.
+Multiclass classical production result,Logistic Regression achieved Macro F1 0.4885 on the full leakage-safe Test set.
+Multiclass QML generalization,Validation Macro F1 was 0.5501; matched Test Macro F1 was 0.3505.
+Quantum advantage,"Not claimed. Binary QML was competitive, but the strongest matched classical model remained superior."

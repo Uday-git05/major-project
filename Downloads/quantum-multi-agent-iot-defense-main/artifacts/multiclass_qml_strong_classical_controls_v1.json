@@ -1,0 +1,33 @@
+{
+  "dataset": "same multiclass QML development subset",
+  "representation": "27 standardized features -> L2 normalized -> padded to 32",
+  "train_rows": 3200,
+  "validation_rows": 1200,
+  "logistic_regression_macro_f1": 0.5622215345313997,
+  "random_forest": {
+    "model": "Random Forest",
+    "accuracy": 0.5708333333333333,
+    "balanced_accuracy": 0.5708333333333333,
+    "macro_precision": 0.6443109772410232,
+    "macro_recall": 0.5708333333333333,
+    "macro_f1": 0.5696937093969421,
+    "weighted_f1": 0.5696937093969421,
+    "training_seconds": 3.1305835247039795,
+    "inference_seconds": 0.13295865058898926
+  },
+  "classical_mlp": {
+    "model": "Classical MLP (32-32-8)",
+    "accuracy": 0.5616666666666666,
+    "balanced_accuracy": 0.5616666666666666,
+    "macro_precision": 0.6200078976549553,
+    "macro_recall": 0.5616666666666666,
+    "macro_f1": 0.5425574898552246,
+    "weighted_f1": 0.5425574898552246,
+    "training_seconds": 1.9427595138549805,
+    "inference_seconds": 0.0076160430908203125
+  },
+  "qml_macro_f1": 0.5500668760827184,
+  "qml_observation": "Initial multiclass QML run showed substantial validation oscillation while training loss decreased.",
+  "important_interpretation": "Matched comparison evaluates models using identical samples and input representation. It must not be described as evidence of quantum advantage.",
+  "test_used": false
+}

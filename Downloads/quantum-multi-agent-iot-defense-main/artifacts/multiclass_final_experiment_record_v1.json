@@ -1,0 +1,28 @@
+{
+  "phase": "Classical Multiclass IDS",
+  "selected_model": "Logistic Regression",
+  "selection_metric": "validation_macro_f1",
+  "validation_macro_f1": 0.473169,
+  "feature_schema": "feature_schema_v2_reproducible.json",
+  "feature_count": 27,
+  "num_classes": 8,
+  "class_mapping": {
+    "0": "Arp_Spoofing",
+    "1": "HTTP_Flood",
+    "2": "ICMP_Flood",
+    "3": "MQTT_Flood",
+    "4": "Normal",
+    "5": "Port_Scanning",
+    "6": "TCP_Flood",
+    "7": "UDP_Flood"
+  },
+  "preprocessing": "multiclass_standard_scaler_v1.joblib",
+  "class_weight": "balanced",
+  "test_rows": 135294,
+  "test_accuracy": 0.6314988099989652,
+  "test_balanced_accuracy": 0.5895652126429498,
+  "test_macro_f1": 0.48849554342456725,
+  "test_weighted_f1": 0.6030420970752375,
+  "important_limitation": "Exact 27-feature vectors can correspond to multiple traffic classes. Phase 1 measured an empirical deterministic feature-only ceiling of approximately 89.49% on the complete raw dataset.",
+  "test_policy": "Test used only after model selection was frozen using Validation."
+}

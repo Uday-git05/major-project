@@ -1,0 +1,66 @@
+{
+  "model": "Multiclass XGBoost GPU (Unweighted)",
+  "accuracy": 0.5281484493401841,
+  "balanced_accuracy": 0.4445327206612809,
+  "macro_precision": 0.4786767265734919,
+  "macro_recall": 0.4445327206612809,
+  "macro_f1": 0.3441806642398527,
+  "weighted_f1": 0.38353787726080807,
+  "per_class": {
+    "0": {
+      "name": "Arp_Spoofing",
+      "precision": 0.5269121813031161,
+      "recall": 0.41797752808988764,
+      "f1": 0.46616541353383456
+    },
+    "1": {
+      "name": "HTTP_Flood",
+      "precision": 0.5274914762707215,
+      "recall": 1.0,
+      "f1": 0.6906637247607563
+    },
+    "2": {
+      "name": "ICMP_Flood",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "3": {
+      "name": "MQTT_Flood",
+      "precision": 0.5451559934318555,
+      "recall": 0.9997558395051681,
+      "f1": 0.7055715106260769
+    },
+    "4": {
+      "name": "Normal",
+      "precision": 0.44080825829123654,
+      "recall": 0.9730909090909091,
+      "f1": 0.606756858891996
+    },
+    "5": {
+      "name": "Port_Scanning",
+      "precision": 0.9916666666666667,
+      "recall": 0.16400696358624692,
+      "f1": 0.2814639611602141
+    },
+    "6": {
+      "name": "TCP_Flood",
+      "precision": 0.7931034482758621,
+      "recall": 0.0011528822055137844,
+      "f1": 0.002302417538415336
+    },
+    "7": {
+      "name": "UDP_Flood",
+      "precision": 0.00427578834847675,
+      "recall": 0.00027764281252169086,
+      "f1": 0.0005214274075281082
+    }
+  },
+  "training_time_seconds": 14.609295129776001,
+  "validation_inference_seconds": 0.1590595245361328,
+  "sample_weighting": "none",
+  "n_estimators": 450,
+  "learning_rate": 0.07,
+  "max_depth": 8,
+  "device": "cuda"
+}

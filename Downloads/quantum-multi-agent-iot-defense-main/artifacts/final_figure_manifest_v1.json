@@ -1,0 +1,6 @@
+{
+  "binary_ml_vs_qml": "binary_ml_vs_qml_macro_f1_v1.png",
+  "multiclass_ml_vs_qml": "multiclass_ml_vs_qml_macro_f1_v1.png",
+  "qml_generalization": "qml_validation_vs_test_generalization_v1.png",
+  "purpose": "Final report and presentation figures for ML/QML evaluation."
+}

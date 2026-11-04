@@ -1,0 +1,26 @@
+{
+  "reason": "Initial QML training showed substantial validation oscillation while training loss decreased and the best epoch occurred at the final training epoch.",
+  "architecture_changed": false,
+  "representation_changed": false,
+  "training_data_changed": false,
+  "changed_parameters": {
+    "learning_rate": {
+      "v1": 0.01,
+      "v2": 0.003
+    },
+    "maximum_epochs": {
+      "v1": 18,
+      "v2": 30
+    },
+    "patience": {
+      "v1": 5,
+      "v2": 7
+    }
+  },
+  "v1_validation_macro_f1": 0.5500668760827184,
+  "v2_validation_macro_f1": 0.4339160584291206,
+  "selected_version": "original_v1",
+  "selected_validation_macro_f1": 0.5500668760827184,
+  "test_used": false,
+  "further_qml_tuning_allowed": false
+}

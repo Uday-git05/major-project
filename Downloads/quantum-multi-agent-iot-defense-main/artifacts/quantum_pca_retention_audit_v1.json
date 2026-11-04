@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "candidate_dimensions": [
+    6,
+    8,
+    10,
+    12
+  ],
+  "diagnostic_model": "Balanced Logistic Regression",
+  "selection_policy": "No PCA dimension is selected from explained variance alone. Candidate dimensions are evaluated for retained classification performance on Validation.",
+  "test_used": false
+}

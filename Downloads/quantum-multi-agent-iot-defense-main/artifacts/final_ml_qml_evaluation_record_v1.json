@@ -1,0 +1,26 @@
+{
+  "production_classical": {
+    "binary": {
+      "model": "XGBoost",
+      "macro_f1": 0.9537621264524828
+    },
+    "multiclass": {
+      "model": "Logistic Regression",
+      "macro_f1": 0.48849554342456725
+    }
+  },
+  "matched_qml_benchmark": {
+    "binary_qml_macro_f1": 0.960962484948035,
+    "multiclass_qml_macro_f1": 0.35046136479981493
+  },
+  "quantum_representation": {
+    "original_feature_count": 27,
+    "all_original_features_retained": true,
+    "padding_dimensions": 5,
+    "state_dimension": 32,
+    "qubits": 5,
+    "encoding": "AmplitudeEmbedding",
+    "pca_used_in_final_qml": false
+  },
+  "core_conclusion": "All 27 deployment features were retained in the QML representation. Binary QML showed strong controlled performance, while multiclass QML showed a substantial generalization gap. No quantum advantage is claimed."
+}

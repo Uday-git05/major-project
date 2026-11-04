@@ -1,0 +1,5 @@
+task,model,accuracy,balanced_accuracy,macro_precision,macro_recall,macro_f1,inference_seconds,evaluation,train_samples,test_samples
+Multiclass IDS,Logistic Regression,0.4275,0.4275,0.6531807463301254,0.4275,0.4569502680492947,0.0029988288879394,Matched balanced Test subset,3200,1200
+Multiclass IDS,Random Forest,0.425,0.425,0.4000373155109997,0.425,0.3172967111109697,0.0793423652648925,Matched balanced Test subset,3200,1200
+Multiclass IDS,Classical MLP,0.35,0.35,0.6265855932321576,0.35,0.3374002473813639,0.0186200141906738,Matched balanced Test subset,3200,1200
+Multiclass IDS,5-Qubit QML,0.3816666666666666,0.3816666666666666,0.4414051552203754,0.3816666666666666,0.3504613647998149,10.303301572799684,Matched balanced Test subset,3200,1200

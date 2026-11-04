@@ -1,0 +1,212 @@
+{
+  "version": "1.0",
+  "random_seed": 42,
+  "features": [
+    "missed_bytes",
+    "orig_pkts",
+    "orig_ip_bytes",
+    "resp_pkts",
+    "resp_ip_bytes",
+    "fwd_pkts_per_sec",
+    "bwd_pkts_per_sec",
+    "flow_pkts_per_sec",
+    "down_up_ratio",
+    "fwd_header_size_tot",
+    "fwd_header_size_min",
+    "fwd_header_size_max",
+    "bwd_header_size_tot",
+    "bwd_header_size_min",
+    "bwd_header_size_max",
+    "fwd_pkts_payload.tot",
+    "fwd_pkts_payload.avg",
+    "bwd_pkts_payload.tot",
+    "bwd_pkts_payload.avg",
+    "flow_pkts_payload.tot",
+    "flow_pkts_payload.avg",
+    "fwd_iat.tot",
+    "fwd_iat.avg",
+    "bwd_iat.tot",
+    "bwd_iat.avg",
+    "flow_iat.tot",
+    "flow_iat.avg"
+  ],
+  "requested_ratios": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "grouping_rule": "Exact 27-feature-vector hash",
+  "allocation_method": "Greedy multi-objective allocation using full 8-class group count vectors",
+  "important_limitation": "Large identical feature groups contain multiple traffic labels, therefore exact class-stratified 70/15/15 splitting is mathematically impossible without creating leakage.",
+  "balancing_applied": false,
+  "scaling_applied": false,
+  "splits": {
+    "train": {
+      "rows": 1039264,
+      "groups": 182310,
+      "classes": {
+        "0": {
+          "name": "Arp_Spoofing",
+          "rows": 2077,
+          "split_percentage": 0.1998529728731102,
+          "share_of_original_class": 70.00337040781935
+        },
+        "1": {
+          "name": "HTTP_Flood",
+          "rows": 184265,
+          "split_percentage": 17.730336083997905,
+          "share_of_original_class": 69.52740307518158
+        },
+        "2": {
+          "name": "ICMP_Flood",
+          "rows": 70468,
+          "split_percentage": 6.780567786433476,
+          "share_of_original_class": 91.69670392588061
+        },
+        "3": {
+          "name": "MQTT_Flood",
+          "rows": 83327,
+          "split_percentage": 8.017885734519814,
+          "share_of_original_class": 62.88545424358142
+        },
+        "4": {
+          "name": "Normal",
+          "rows": 19208,
+          "split_percentage": 1.8482310558241215,
+          "share_of_original_class": 69.95411173428508
+        },
+        "5": {
+          "name": "Port_Scanning",
+          "rows": 99128,
+          "split_percentage": 9.538288635034025,
+          "share_of_original_class": 78.23835832675611
+        },
+        "6": {
+          "name": "TCP_Flood",
+          "rows": 341865,
+          "split_percentage": 32.89491409305047,
+          "share_of_original_class": 89.54854426152214
+        },
+        "7": {
+          "name": "UDP_Flood",
+          "rows": 238926,
+          "split_percentage": 22.989923638267083,
+          "share_of_original_class": 80.56772313886556
+        }
+      }
+    },
+    "validation": {
+      "rows": 135265,
+      "groups": 34098,
+      "classes": {
+        "0": {
+          "name": "Arp_Spoofing",
+          "rows": 445,
+          "split_percentage": 0.32898384652349094,
+          "share_of_original_class": 14.998314796090325
+        },
+        "1": {
+          "name": "HTTP_Flood",
+          "rows": 40380,
+          "split_percentage": 29.852511736221494,
+          "share_of_original_class": 15.236298462409206
+        },
+        "2": {
+          "name": "ICMP_Flood",
+          "rows": 3191,
+          "split_percentage": 2.359072930913392,
+          "share_of_original_class": 4.152298663613059
+        },
+        "3": {
+          "name": "MQTT_Flood",
+          "rows": 24574,
+          "split_percentage": 18.167301223524195,
+          "share_of_original_class": 18.545575294703635
+        },
+        "4": {
+          "name": "Normal",
+          "rows": 4125,
+          "split_percentage": 3.0495693638413486,
+          "share_of_original_class": 15.022944132857456
+        },
+        "5": {
+          "name": "Port_Scanning",
+          "rows": 13786,
+          "split_percentage": 10.191845636343475,
+          "share_of_original_class": 10.880820836621941
+        },
+        "6": {
+          "name": "TCP_Flood",
+          "rows": 19950,
+          "split_percentage": 14.748826377850884,
+          "share_of_original_class": 5.22572786923893
+        },
+        "7": {
+          "name": "UDP_Flood",
+          "rows": 28814,
+          "split_percentage": 21.301888884781725,
+          "share_of_original_class": 9.71630703449299
+        }
+      }
+    },
+    "test": {
+      "rows": 135294,
+      "groups": 44621,
+      "classes": {
+        "0": {
+          "name": "Arp_Spoofing",
+          "rows": 445,
+          "split_percentage": 0.3289133294898517,
+          "share_of_original_class": 14.998314796090325
+        },
+        "1": {
+          "name": "HTTP_Flood",
+          "rows": 40380,
+          "split_percentage": 29.846112909663397,
+          "share_of_original_class": 15.236298462409206
+        },
+        "2": {
+          "name": "ICMP_Flood",
+          "rows": 3190,
+          "split_percentage": 2.3578281372418584,
+          "share_of_original_class": 4.150997410506318
+        },
+        "3": {
+          "name": "MQTT_Flood",
+          "rows": 24605,
+          "split_percentage": 18.186320162017534,
+          "share_of_original_class": 18.568970461714944
+        },
+        "4": {
+          "name": "Normal",
+          "rows": 4125,
+          "split_percentage": 3.0489156947093,
+          "share_of_original_class": 15.022944132857456
+        },
+        "5": {
+          "name": "Port_Scanning",
+          "rows": 13786,
+          "split_percentage": 10.189661034487855,
+          "share_of_original_class": 10.880820836621941
+        },
+        "6": {
+          "name": "TCP_Flood",
+          "rows": 19950,
+          "split_percentage": 14.745664996230431,
+          "share_of_original_class": 5.22572786923893
+        },
+        "7": {
+          "name": "UDP_Flood",
+          "rows": 28813,
+          "split_percentage": 21.29658373615977,
+          "share_of_original_class": 9.715969826641443
+        }
+      }
+    }
+  },
+  "overlap_verification": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  }
+}

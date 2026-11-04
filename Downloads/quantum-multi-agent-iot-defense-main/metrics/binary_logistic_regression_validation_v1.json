@@ -1,0 +1,23 @@
+{
+  "model": "Logistic Regression (Balanced)",
+  "accuracy": 0.9791575475635453,
+  "balanced_accuracy": 0.9881677252576735,
+  "macro_precision": 0.7507056869118065,
+  "macro_recall": 0.9881677252576735,
+  "macro_f1": 0.8283331675346708,
+  "weighted_f1": 0.9824948955830374,
+  "normal_precision": 0.5014644862094215,
+  "normal_recall": 0.9975722262685117,
+  "attack_precision": 0.9999468876141916,
+  "attack_recall": 0.9787632242468353,
+  "tn": 4109,
+  "fp": 10,
+  "fn": 4085,
+  "tp": 188270,
+  "roc_auc": 0.9963849962586311,
+  "average_precision": 0.999916066538209,
+  "training_time_seconds": 21.089308500289917,
+  "validation_inference_seconds": 0.0399477481842041,
+  "class_weight": "balanced",
+  "scaled": true
+}

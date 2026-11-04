@@ -1,0 +1,19 @@
+{
+  "task": "Binary",
+  "model": "Logistic Regression",
+  "purpose": "classical_qml_control",
+  "representation": "27 standardized features -> L2 normalized -> padded to 32",
+  "training_rows": 3000,
+  "validation_rows": 1000,
+  "input_dimension": 32,
+  "accuracy": 0.915,
+  "balanced_accuracy": 0.915,
+  "macro_precision": 0.9261847937265598,
+  "macro_recall": 0.915,
+  "macro_f1": 0.9144386318636575,
+  "weighted_f1": 0.9144386318636575,
+  "training_time_seconds": 0.012637138366699219,
+  "validation_inference_seconds": 0.0006704330444335938,
+  "class_weight": null,
+  "test_used": false
+}

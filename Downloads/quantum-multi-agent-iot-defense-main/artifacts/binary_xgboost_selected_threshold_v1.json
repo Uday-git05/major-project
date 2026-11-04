@@ -1,0 +1,11 @@
+{
+  "model": "XGBoost",
+  "selection_dataset": "validation",
+  "selection_metric": "macro_f1",
+  "selected_threshold": 0.012,
+  "validation_macro_f1": 0.9554056997361555,
+  "validation_balanced_accuracy": 0.982457885547094,
+  "validation_normal_precision": 0.8633903442303529,
+  "validation_normal_recall": 0.9681961641175042,
+  "validation_attack_recall": 0.9967196069766837
+}

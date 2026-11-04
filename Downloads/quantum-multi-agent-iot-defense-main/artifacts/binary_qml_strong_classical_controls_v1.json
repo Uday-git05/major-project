@@ -1,0 +1,32 @@
+{
+  "dataset": "same binary QML development subset",
+  "representation": "27 standardized features -> L2 normalized -> padded to 32",
+  "train_rows": 3000,
+  "validation_rows": 1000,
+  "logistic_regression_macro_f1": 0.9144386318636575,
+  "random_forest": {
+    "model": "Random Forest",
+    "accuracy": 0.993,
+    "balanced_accuracy": 0.993,
+    "precision": 0.9959758551307847,
+    "recall": 0.99,
+    "macro_f1": 0.9929999369994329,
+    "weighted_f1": 0.992999936999433,
+    "training_seconds": 5.13123893737793,
+    "inference_seconds": 0.1010138988494873
+  },
+  "classical_mlp": {
+    "model": "Classical MLP (32-16-1)",
+    "accuracy": 0.976,
+    "balanced_accuracy": 0.976,
+    "precision": 0.9958333333333333,
+    "recall": 0.956,
+    "macro_f1": 0.9759903961584634,
+    "weighted_f1": 0.9759903961584635,
+    "training_seconds": 1.7323460578918457,
+    "inference_seconds": 0.0009455680847167969
+  },
+  "qml_macro_f1": 0.9418427427764675,
+  "important_interpretation": "This comparison evaluates predictive performance under matched data and input representation. It must not be described as proof of quantum advantage.",
+  "test_used": false
+}

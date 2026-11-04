@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "created_utc": "2026-09-24T15:27:24.984598+00:00",
+  "target_column": "traffic",
+  "mapping": {
+    "0": "Arp_Spoofing",
+    "1": "HTTP_Flood",
+    "2": "ICMP_Flood",
+    "3": "MQTT_Flood",
+    "4": "Normal",
+    "5": "Port_Scanning",
+    "6": "TCP_Flood",
+    "7": "UDP_Flood"
+  },
+  "binary_mapping": {
+    "0": "Normal",
+    "1": "Attack"
+  },
+  "normal_traffic_code": 4,
+  "attack_traffic_codes": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    6,
+    7
+  ],
+  "excluded_raw_classes": [
+    "BotNet_DDOS"
+  ],
+  "evidence": {
+    "source": "Farm-Flow published paper and dataset class counts",
+    "botnet_note": "BotNet_DDOS was excluded by the dataset authors from the prepared training/testing datasets."
+  }
+}

@@ -1,0 +1,13 @@
+import { incidentTimeline } from "@/features/incidents";
+import type { EventEnvelope } from "@/types/api";
+import { formatTime, titleCase } from "@/lib/format";
+import { Empty, Panel } from "./ui";
+
+const labels: Record<string, string> = { network_activity: "Network activity", feature_vector: "Feature vector extracted", classical_prediction: "Classical prediction", quantum_prediction: "QML corroboration", threat_assessment: "Assessment update recorded", attack_started: "Synthetic attack started", attack_activity: "Attack traffic generated", defense_action_requested: "Defense requested", defense_action_started: "Defense activated", defense_action_completed: "Defense action completed", defense_action_failed: "Defense failed", human_override: "Human override", attack_completed: "Synthetic attack ended", attack_cancelled: "Synthetic attack cancelled", defense_rollback: "Policy rollback", recovery_started: "Recovery monitoring", recovery_progress: "Recovery state advanced", recovery_verified: "Recovery verified", recovery_failed: "Recovery requires attention" };
+export function IncidentTimeline({ events, correlationId, embedded = false }: { events: EventEnvelope[]; correlationId?: string; embedded?: boolean }) {
+  const timeline = incidentTimeline(events, correlationId).slice(-20);
+  const content = !timeline.length ? <Empty>Select an incident or start a synthetic scenario to build a timeline.</Empty> : <div className="timeline">{timeline.map((event, index) => <div key={event.event_id} className={event.event_type}><time>{formatTime(event.timestamp)}</time><i><span>{index + 1}</span></i><section><b>{event.payload.state === "manual_review" ? "Manual Review Required" : labels[event.event_type] ?? titleCase(event.event_type)}</b><small>{event.source}</small><p>{summarize(event)}</p></section></div>)}</div>;
+  if (embedded) return <section className="investigation-section incident-timeline-section"><div className="investigation-heading"><div><span>CHRONOLOGY</span><h3>Incident Timeline</h3></div>{correlationId && <span className="correlation">CORR {correlationId.slice(0, 8)}</span>}</div>{content}</section>;
+  return <Panel title="Incident Timeline" kicker="Up to 20 retained events for the selected case correlation." className="timeline-panel" action={correlationId ? <span className="correlation">CORR {correlationId.slice(0, 8)}</span> : null}>{content}</Panel>;
+}
+function summarize(event: EventEnvelope) { const payload = event.payload as Record<string, unknown>; return String(payload.decision_reason ?? payload.reason ?? payload.attack_type ?? payload.flow_id ?? `${event.event_type} event accepted`); }

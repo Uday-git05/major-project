@@ -1,0 +1,48 @@
+{
+  "version": "1.0",
+  "purpose": "Measure train-only intrinsic dimensionality before quantum encoding decisions.",
+  "original_feature_count": 27,
+  "important_policy": "PCA is being evaluated as a reproducible compression method. No dimensionality choice has been frozen yet.",
+  "binary": {
+    "training_rows": 916876,
+    "components_required": {
+      "80.0%": 6,
+      "90.0%": 9,
+      "95.0%": 10,
+      "99.0%": 13,
+      "99.9%": 16
+    },
+    "quantum_dimension_variance": {
+      "2": 0.4176648760635329,
+      "4": 0.6724964663564537,
+      "6": 0.8055373162457831,
+      "8": 0.890725927122634,
+      "10": 0.9638703938540003,
+      "12": 0.9891699909993722,
+      "16": 0.9990513055013815,
+      "20": 0.9997730721690924,
+      "27": 0.9999999999999741
+    }
+  },
+  "multiclass": {
+    "training_rows": 1039264,
+    "components_required": {
+      "80.0%": 6,
+      "90.0%": 8,
+      "95.0%": 10,
+      "99.0%": 14,
+      "99.9%": 19
+    },
+    "quantum_dimension_variance": {
+      "2": 0.5088194548853309,
+      "4": 0.7316814783273663,
+      "6": 0.8362223463028072,
+      "8": 0.9069792457447184,
+      "10": 0.9550522331671062,
+      "12": 0.9826475100248013,
+      "16": 0.9959448685704173,
+      "20": 0.999687986899973,
+      "27": 1.0000000000000142
+    }
+  }
+}

@@ -1,0 +1,9 @@
+,Arp_Spoofing,HTTP_Flood,ICMP_Flood,MQTT_Flood,Normal,Port_Scanning,TCP_Flood,UDP_Flood
+Arp_Spoofing,257,8,0,1,179,0,0,0
+HTTP_Flood,0,40372,0,0,8,0,0,0
+ICMP_Flood,0,2514,0,670,7,0,0,0
+MQTT_Flood,0,0,0,24574,0,0,0,0
+Normal,252,17,0,0,3856,0,0,0
+Port_Scanning,89,5400,0,1580,562,2709,0,3446
+TCP_Flood,9,10,0,19849,82,0,0,0
+UDP_Flood,0,11460,0,3423,3,12,0,13916

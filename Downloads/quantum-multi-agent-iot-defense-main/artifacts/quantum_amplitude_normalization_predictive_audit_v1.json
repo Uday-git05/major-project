@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "purpose": "Determine whether L2 normalization required by amplitude encoding removes important predictive information.",
+  "binary": {
+    "task": "Binary",
+    "representation": "standardized_then_l2_normalized",
+    "feature_count": 27,
+    "reference_macro_f1": 0.828333,
+    "accuracy": 0.9720675509227684,
+    "balanced_accuracy": 0.9841904480232992,
+    "macro_precision": 0.7142434797956582,
+    "macro_recall": 0.9841904480232992,
+    "macro_f1": 0.7924726581470023,
+    "weighted_f1": 0.9774345467993222,
+    "macro_f1_absolute_change": -0.03586034185299769,
+    "macro_f1_retention_ratio": 0.9567078193757852,
+    "training_time_seconds": 5.620014905929565
+  },
+  "multiclass": {
+    "task": "Multiclass",
+    "representation": "standardized_then_l2_normalized",
+    "feature_count": 27,
+    "reference_macro_f1": 0.473169,
+    "accuracy": 0.6357742209736443,
+    "balanced_accuracy": 0.5665472409122662,
+    "macro_precision": 0.4610073688868971,
+    "macro_recall": 0.5665472409122662,
+    "macro_f1": 0.45362003640189186,
+    "weighted_f1": 0.5798720995811562,
+    "macro_f1_absolute_change": -0.01954896359810815,
+    "macro_f1_retention_ratio": 0.9586850288203408,
+    "training_time_seconds": 214.58815741539001
+  },
+  "test_used": false,
+  "encoding_status": "Amplitude encoding remains a candidate. Final decision depends on predictive retention after normalization."
+}

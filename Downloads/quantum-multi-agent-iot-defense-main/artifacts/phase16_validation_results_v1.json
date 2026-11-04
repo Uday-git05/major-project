@@ -1,0 +1,494 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-25T05:31:01.569154+00:00",
+  "artifact_integrity": {
+    "status": "passed",
+    "files": {
+      "binary_xgboost_gpu_v1.json": {
+        "sha256": "a8c67916541688825560b6a1d0eb3312bbab89649e517afba4405815f797b547",
+        "bytes": 1834529
+      },
+      "multiclass_logistic_regression_v1.joblib": {
+        "sha256": "7a608ed4ded424a5621dfea4302e4f825a830fd7e736e63945aaf422807e69a5",
+        "bytes": 2663
+      },
+      "binary_qml_amplitude_v1.pt": {
+        "sha256": "f97ce94219fb3386b2e381ea6006ebb0cfbe29e17836b1debf8bbc1e19ef4cf2",
+        "bytes": 2673
+      },
+      "multiclass_qml_selected_final_v1.pt": {
+        "sha256": "53e2de4806031f5511e655c8dd3812ff235217c2ed17f155d1aa02b29fade87d",
+        "bytes": 2882
+      },
+      "binary_standard_scaler_v1.joblib": {
+        "sha256": "cd00bd2ce129e8352e353717aaab520ae1ef8996aceb35536ab9c58cd1ea31f1",
+        "bytes": 1999
+      },
+      "multiclass_standard_scaler_v1.joblib": {
+        "sha256": "82659b814842f0b3da05a9b5ab0ec868dd677ff558e21b69473ab3e801762df8",
+        "bytes": 1999
+      },
+      "feature_schema_v2_reproducible.json": {
+        "sha256": "bf96685398414d67e49e9606cc3e94d9aa7899525dea6a1b96841bdd819ef43c",
+        "bytes": 2279
+      },
+      "class_mapping_v1.json": {
+        "sha256": "ebb77af6f615cfd68529152649c2dc53288a2964c4367630cafaf5291c4ec4f1",
+        "bytes": 741
+      },
+      "qml_amplitude_representation_v1.json": {
+        "sha256": "16ea5e7666bb88eb505343340995f89479c6e097cfca1baa6049f531602e6457",
+        "bytes": 2942
+      },
+      "binary_qml_threshold_v1.json": {
+        "sha256": "8e0d1b99ac7ec65d24b82557498ba4e5f7ea23a0606c5f60a4593dcde7506b7d",
+        "bytes": 448
+      }
+    },
+    "feature_count": 27,
+    "feature_order": [
+      "missed_bytes",
+      "orig_pkts",
+      "orig_ip_bytes",
+      "resp_pkts",
+      "resp_ip_bytes",
+      "fwd_pkts_per_sec",
+      "bwd_pkts_per_sec",
+      "flow_pkts_per_sec",
+      "down_up_ratio",
+      "fwd_header_size_tot",
+      "fwd_header_size_min",
+      "fwd_header_size_max",
+      "bwd_header_size_tot",
+      "bwd_header_size_min",
+      "bwd_header_size_max",
+      "fwd_pkts_payload.tot",
+      "fwd_pkts_payload.avg",
+      "bwd_pkts_payload.tot",
+      "bwd_pkts_payload.avg",
+      "flow_pkts_payload.tot",
+      "flow_pkts_payload.avg",
+      "fwd_iat.tot",
+      "fwd_iat.avg",
+      "bwd_iat.tot",
+      "bwd_iat.avg",
+      "flow_iat.tot",
+      "flow_iat.avg"
+    ],
+    "classical_binary_threshold": 0.012,
+    "qml_binary_threshold": 0.39,
+    "qml_trainable_parameters": {
+      "binary": 51,
+      "multiclass": 93
+    },
+    "qml_device": "default.qubit",
+    "checkpoint_compatibility": true,
+    "selected_models": {
+      "classical_binary": "binary_xgboost_gpu_v1.json",
+      "classical_multiclass": "multiclass_logistic_regression_v1.joblib",
+      "qml_binary": "binary_qml_amplitude_v1.pt",
+      "qml_multiclass": "multiclass_qml_selected_final_v1.pt"
+    }
+  },
+  "lifecycle": {
+    "status": "passed",
+    "cycles": [
+      {
+        "startup_order": [
+          "feature_manager",
+          "attack_controller",
+          "agent_manager",
+          "simulation_engine",
+          "automatic_runner"
+        ],
+        "new_epoch": true,
+        "reset_tick": 0,
+        "attacks": 0,
+        "defenses": 0,
+        "recoveries": 0,
+        "policy_actions": 0,
+        "agent_count": 6,
+        "subscriptions_after_deactivate": 1,
+        "active_after_deactivate": false
+      },
+      {
+        "startup_order": [
+          "feature_manager",
+          "attack_controller",
+          "agent_manager",
+          "simulation_engine",
+          "automatic_runner"
+        ],
+        "new_epoch": true,
+        "reset_tick": 0,
+        "attacks": 0,
+        "defenses": 0,
+        "recoveries": 0,
+        "policy_actions": 0,
+        "agent_count": 6,
+        "subscriptions_after_deactivate": 1,
+        "active_after_deactivate": false
+      },
+      {
+        "startup_order": [
+          "feature_manager",
+          "attack_controller",
+          "agent_manager",
+          "simulation_engine",
+          "automatic_runner"
+        ],
+        "new_epoch": true,
+        "reset_tick": 0,
+        "attacks": 0,
+        "defenses": 0,
+        "recoveries": 0,
+        "policy_actions": 0,
+        "agent_count": 6,
+        "subscriptions_after_deactivate": 1,
+        "active_after_deactivate": false
+      }
+    ],
+    "orphan_runtime_tasks": []
+  },
+  "normal_soak": {
+    "status": "passed",
+    "logical_ticks": 50,
+    "elapsed_seconds": 51.506,
+    "event_counts": {
+      "agent_status": 6,
+      "device_state": 8,
+      "simulation_tick": 50,
+      "telemetry": 350,
+      "observation": 716,
+      "threat_assessment": 1464,
+      "network_activity": 366,
+      "feature_vector": 374,
+      "system_health": 50,
+      "classical_prediction": 374,
+      "defense_action_requested": 320,
+      "quantum_prediction": 374,
+      "defense_action_started": 9,
+      "defense_action_completed": 9,
+      "recovery_started": 9,
+      "recovery_progress": 9,
+      "recovery_failed": 9
+    },
+    "feature_vectors": 374,
+    "classical_inferences": 374,
+    "qml_inferences": 374,
+    "threat_assessments": 1464,
+    "false_positive_incident_correlations_observed": 320,
+    "agent_queue_peaks": {
+      "monitoring-agent": 0,
+      "classical-ml-agent": 12,
+      "quantum-ml-agent": 13,
+      "threat-analysis-agent": 0,
+      "defense-agent": 0,
+      "recovery-agent": 0
+    },
+    "agent_dropped_events": {
+      "monitoring-agent": 0,
+      "classical-ml-agent": 0,
+      "quantum-ml-agent": 0,
+      "threat-analysis-agent": 0,
+      "defense-agent": 0,
+      "recovery-agent": 0
+    },
+    "agent_errors": {
+      "monitoring-agent": 0,
+      "classical-ml-agent": 0,
+      "quantum-ml-agent": 0,
+      "threat-analysis-agent": 0,
+      "defense-agent": 0,
+      "recovery-agent": 0
+    },
+    "websocket_drops": 0,
+    "python_traced_memory_delta_bytes": 22958333,
+    "python_traced_memory_peak_bytes": 23017516,
+    "history_sizes": {
+      "simulation_events": 824,
+      "feature_vectors": 374,
+      "agent_audit_max": 500,
+      "broadcast_events": 2000
+    }
+  },
+  "attacks": [
+    {
+      "attack_type": "Arp_Spoofing",
+      "target": "gateway-01",
+      "intensity": "high",
+      "ticks_active": 3,
+      "attack_network_events": 24,
+      "feature_vectors": 25,
+      "classical_outputs": {
+        "Attack|Arp_Spoofing": 25
+      },
+      "qml_outputs": {
+        "Normal|Normal": 25
+      },
+      "final_threat_severity": "medium",
+      "agreement": false,
+      "defense_actions": [
+        "quarantine_synthetic_source:planned"
+      ],
+      "recovery_results": [],
+      "classical_attack_observed": true,
+      "qml_attack_observed": false
+    },
+    {
+      "attack_type": "HTTP_Flood",
+      "target": "gateway-01",
+      "intensity": "high",
+      "ticks_active": 3,
+      "attack_network_events": 6,
+      "feature_vectors": 12,
+      "classical_outputs": {
+        "Attack|HTTP_Flood": 12
+      },
+      "qml_outputs": {
+        "Normal|Normal": 12
+      },
+      "final_threat_severity": "medium",
+      "agreement": false,
+      "defense_actions": [
+        "quarantine_synthetic_source:planned"
+      ],
+      "recovery_results": [],
+      "classical_attack_observed": true,
+      "qml_attack_observed": false
+    },
+    {
+      "attack_type": "ICMP_Flood",
+      "target": "gateway-01",
+      "intensity": "high",
+      "ticks_active": 3,
+      "attack_network_events": 24,
+      "feature_vectors": 25,
+      "classical_outputs": {
+        "Attack|Arp_Spoofing": 25
+      },
+      "qml_outputs": {
+        "Normal|Normal": 23,
+        "Normal|MQTT_Flood": 2
+      },
+      "final_threat_severity": "medium",
+      "agreement": false,
+      "defense_actions": [
+        "quarantine_synthetic_source:planned"
+      ],
+      "recovery_results": [],
+      "classical_attack_observed": true,
+      "qml_attack_observed": false
+    },
+    {
+      "attack_type": "MQTT_Flood",
+      "target": "gateway-01",
+      "intensity": "high",
+      "ticks_active": 3,
+      "attack_network_events": 36,
+      "feature_vectors": 72,
+      "classical_outputs": {
+        "Attack|Arp_Spoofing": 72
+      },
+      "qml_outputs": {
+        "Normal|Normal": 72
+      },
+      "final_threat_severity": "medium",
+      "agreement": false,
+      "defense_actions": [
+        "quarantine_synthetic_source:planned"
+      ],
+      "recovery_results": [],
+      "classical_attack_observed": true,
+      "qml_attack_observed": false
+    },
+    {
+      "attack_type": "Port_Scanning",
+      "target": "gateway-01",
+      "intensity": "high",
+      "ticks_active": 3,
+      "attack_network_events": 16,
+      "feature_vectors": 32,
+      "classical_outputs": {
+        "Attack|HTTP_Flood": 32
+      },
+      "qml_outputs": {
+        "Attack|HTTP_Flood": 32
+      },
+      "final_threat_severity": "high",
+      "agreement": true,
+      "defense_actions": [
+        "quarantine_synthetic_source:rolled_back"
+      ],
+      "recovery_results": [
+        "recovered:verified=True"
+      ],
+      "classical_attack_observed": true,
+      "qml_attack_observed": true
+    },
+    {
+      "attack_type": "TCP_Flood",
+      "target": "gateway-01",
+      "intensity": "high",
+      "ticks_active": 3,
+      "attack_network_events": 24,
+      "feature_vectors": 47,
+      "classical_outputs": {
+        "Attack|Arp_Spoofing": 47
+      },
+      "qml_outputs": {
+        "Normal|Arp_Spoofing": 41,
+        "Normal|Normal": 6
+      },
+      "final_threat_severity": "medium",
+      "agreement": false,
+      "defense_actions": [
+        "quarantine_synthetic_source:planned"
+      ],
+      "recovery_results": [],
+      "classical_attack_observed": true,
+      "qml_attack_observed": false
+    },
+    {
+      "attack_type": "UDP_Flood",
+      "target": "gateway-01",
+      "intensity": "high",
+      "ticks_active": 3,
+      "attack_network_events": 24,
+      "feature_vectors": 48,
+      "classical_outputs": {
+        "Attack|HTTP_Flood": 48
+      },
+      "qml_outputs": {
+        "Normal|MQTT_Flood": 48
+      },
+      "final_threat_severity": "medium",
+      "agreement": false,
+      "defense_actions": [
+        "quarantine_synthetic_source:planned"
+      ],
+      "recovery_results": [],
+      "classical_attack_observed": true,
+      "qml_attack_observed": false
+    }
+  ],
+  "sequential_attacks": {
+    "status": "passed",
+    "correlations": [
+      "498725b2-2cb8-5488-8fcd-8e8d6f099d0c",
+      "6ec5da8a-2dbb-5972-a5fc-4de72c372864"
+    ],
+    "correlations_distinct": true,
+    "incident_ids_by_correlation": {
+      "498725b2-2cb8-5488-8fcd-8e8d6f099d0c": [
+        "incident-498725b2-2cb8-5488-8fcd-8e8d6f099d0c"
+      ],
+      "6ec5da8a-2dbb-5972-a5fc-4de72c372864": [
+        "incident-6ec5da8a-2dbb-5972-a5fc-4de72c372864"
+      ]
+    },
+    "incidents_scoped": true,
+    "policy_action_count_after_sequences": 4
+  },
+  "disagreement_observations": {
+    "classical_attack_qml_normal": [
+      "Arp_Spoofing",
+      "HTTP_Flood",
+      "ICMP_Flood",
+      "MQTT_Flood",
+      "TCP_Flood",
+      "UDP_Flood"
+    ],
+    "classical_attack_qml_attack": [
+      "Port_Scanning"
+    ],
+    "policy": "No probability averaging; classical is primary and QML is asynchronous corroboration."
+  },
+  "resets": {
+    "status": "passed",
+    "reset_during_attack": {
+      "active_before": true,
+      "new_epoch": true,
+      "attacks_cleared": true,
+      "features_cleared": true,
+      "defenses_cleared": true,
+      "recoveries_cleared": true,
+      "policy_cleared": true,
+      "scenario_was": "attack-c4add590-2026-5d01-b7c7-6a7787653955"
+    },
+    "reset_during_defense_recovery": {
+      "defense_before": 1,
+      "recovery_before": 1,
+      "defenses_cleared": true,
+      "recoveries_cleared": true,
+      "policy_cleared": true
+    }
+  },
+  "human_overrides": {
+    "status": "passed",
+    "states": {
+      "approve_then_rollback": "rolled_back",
+      "reject": "rejected",
+      "cancel": "cancelled",
+      "manual_allowed": "completed"
+    },
+    "human_override_events": 4,
+    "rollback_events": 1
+  },
+  "performance": {
+    "feature_extraction": {
+      "observations": 30,
+      "mean_ms": 0.7276,
+      "median_ms": 0.6596,
+      "min_ms": 0.5297,
+      "max_ms": 1.2847,
+      "p95_ms": 1.1657
+    },
+    "classical_binary": {
+      "observations": 8,
+      "mean_ms": 0.9717,
+      "median_ms": 0.775,
+      "min_ms": 0.6755,
+      "max_ms": 1.5911,
+      "p95_ms": 1.5911
+    },
+    "classical_multiclass": {
+      "observations": 8,
+      "mean_ms": 0.5461,
+      "median_ms": 0.497,
+      "min_ms": 0.4486,
+      "max_ms": 0.785,
+      "p95_ms": 0.785
+    },
+    "qml_binary": {
+      "observations": 8,
+      "mean_ms": 18.8087,
+      "median_ms": 19.1411,
+      "min_ms": 13.4238,
+      "max_ms": 21.1908,
+      "p95_ms": 21.1908
+    },
+    "qml_multiclass": {
+      "observations": 8,
+      "mean_ms": 13.2383,
+      "median_ms": 12.4117,
+      "min_ms": 11.7221,
+      "max_ms": 16.6941,
+      "p95_ms": 16.6941
+    },
+    "websocket_in_process_delivery": {
+      "observations": 20,
+      "mean_ms": 0.048,
+      "median_ms": 0.0427,
+      "min_ms": 0.0417,
+      "max_ms": 0.1241,
+      "p95_ms": 0.0573
+    },
+    "disclosure": "Local single-machine observations; not a formal benchmark."
+  },
+  "safety": {
+    "status": "passed",
+    "prohibited_implementation_findings": [],
+    "boundary": "In-memory metadata-only simulator; no physical-device or OS network controls."
+  }
+}

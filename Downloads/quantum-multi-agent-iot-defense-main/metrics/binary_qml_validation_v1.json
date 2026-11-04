@@ -1,0 +1,29 @@
+{
+  "model": "Hybrid Variational Quantum Classifier",
+  "encoding": "AmplitudeEmbedding",
+  "qubits": 5,
+  "quantum_layers": 3,
+  "quantum_parameters": 45,
+  "total_trainable_parameters": 51,
+  "simulator": "lightning.qubit",
+  "optimizer": "Adam",
+  "learning_rate": 0.01,
+  "batch_size": 64,
+  "maximum_epochs": 15,
+  "epochs_completed": 6,
+  "best_epoch": 2,
+  "early_stopping_patience": 4,
+  "decision_threshold": 0.5,
+  "validation_metrics": {
+    "accuracy": 0.942,
+    "balanced_accuracy": 0.942,
+    "precision": 0.9933035714285714,
+    "recall": 0.89,
+    "macro_f1": 0.9418427427764675,
+    "weighted_f1": 0.9418427427764676
+  },
+  "classical_control_macro_f1": 0.9144386318636575,
+  "macro_f1_difference_vs_control": 0.02740411091281003,
+  "total_training_seconds": 269.2800009250641,
+  "test_used": false
+}

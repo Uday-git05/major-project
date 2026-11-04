@@ -1,0 +1,22 @@
+{
+  "model": "XGBoost \u2014 FINAL TEST (threshold=0.012)",
+  "accuracy": 0.9959638220009874,
+  "balanced_accuracy": 0.981921963133221,
+  "macro_precision": 0.9288497540712282,
+  "macro_recall": 0.981921963133221,
+  "macro_f1": 0.9537621264524828,
+  "weighted_f1": 0.9960814099157239,
+  "normal_precision": 0.8584032709274801,
+  "normal_recall": 0.9672647914645974,
+  "attack_precision": 0.9992962372149761,
+  "attack_recall": 0.9965791348018446,
+  "tn": 3989,
+  "fp": 135,
+  "fn": 658,
+  "tp": 191691,
+  "roc_auc": 0.9995855258379733,
+  "average_precision": 0.9999911270609074,
+  "threshold": 0.012,
+  "test_inference_seconds": 1.9536607265472412,
+  "evaluation_dataset": "untouched_test"
+}

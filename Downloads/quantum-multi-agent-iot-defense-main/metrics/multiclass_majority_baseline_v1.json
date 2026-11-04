@@ -1,0 +1,59 @@
+{
+  "model": "Majority-Class Baseline (HTTP_Flood)",
+  "accuracy": 0.29852511736221493,
+  "balanced_accuracy": 0.125,
+  "macro_precision": 0.037315639670276866,
+  "macro_recall": 0.125,
+  "macro_f1": 0.05747388197785305,
+  "weighted_f1": 0.13725917890160538,
+  "per_class": {
+    "0": {
+      "name": "Arp_Spoofing",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "1": {
+      "name": "HTTP_Flood",
+      "precision": 0.29852511736221493,
+      "recall": 1.0,
+      "f1": 0.4597910558228244
+    },
+    "2": {
+      "name": "ICMP_Flood",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "3": {
+      "name": "MQTT_Flood",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "4": {
+      "name": "Normal",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "5": {
+      "name": "Port_Scanning",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "6": {
+      "name": "TCP_Flood",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "7": {
+      "name": "UDP_Flood",
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  }
+}

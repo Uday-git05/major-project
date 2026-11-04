@@ -1,0 +1,78 @@
+{
+  "project": "Farm-Flow Quantum-Enhanced IoT IDS",
+  "status": "ML_QML_experiments_complete",
+  "feature_pipeline": {
+    "original_feature_count": 27,
+    "all_original_features_retained_for_qml": true,
+    "pca_used_in_final_qml": false,
+    "preprocessing": [
+      "TRAIN-fitted StandardScaler",
+      "L2 normalization",
+      "zero padding 27 to 32",
+      "AmplitudeEmbedding"
+    ],
+    "quantum_state_dimension": 32,
+    "qubits": 5
+  },
+  "production_classical": {
+    "binary": {
+      "selected_model": "XGBoost",
+      "model_file": "binary_xgboost_gpu_v1.json",
+      "threshold": 0.012,
+      "test_macro_f1": 0.9537621264524828
+    },
+    "multiclass": {
+      "selected_model": "Logistic Regression",
+      "model_file": "multiclass_logistic_regression_v1.joblib",
+      "test_macro_f1": 0.48849554342456725
+    }
+  },
+  "qml": {
+    "binary": {
+      "model_file": "binary_qml_amplitude_v1.pt",
+      "qubits": 5,
+      "quantum_layers": 3,
+      "trainable_parameters": 51,
+      "decision_threshold": 0.39,
+      "validation_macro_f1": 0.9599686153944693,
+      "test_macro_f1": 0.960962484948035
+    },
+    "multiclass": {
+      "selected_model_file": "multiclass_qml_selected_final_v1.pt",
+      "selected_version": "original_v1",
+      "qubits": 5,
+      "quantum_layers": 3,
+      "trainable_parameters": 93,
+      "validation_macro_f1": 0.5500668760827184,
+      "test_macro_f1": 0.35046136479981493
+    }
+  },
+  "artifacts": {
+    "feature_schema": "feature_schema_v2_reproducible.json",
+    "class_mapping": "class_mapping_v1.json",
+    "binary_scaler": "binary_standard_scaler_v1.joblib",
+    "multiclass_scaler": "multiclass_standard_scaler_v1.joblib",
+    "qml_representation": "qml_amplitude_representation_v1.json",
+    "binary_qml_threshold": "binary_qml_threshold_v1.json",
+    "final_evaluation": "final_ml_qml_evaluation_record_v1.json",
+    "figure_manifest": "final_figure_manifest_v1.json"
+  },
+  "figures": [
+    "binary_ml_vs_qml_macro_f1_v1.png",
+    "multiclass_ml_vs_qml_macro_f1_v1.png",
+    "qml_validation_vs_test_generalization_v1.png"
+  ],
+  "research_conclusions": {
+    "binary_qml": "Strong matched binary detection performance. QML outperformed the matched Logistic Regression and small MLP controls, but not Random Forest.",
+    "multiclass_qml": "Multiclass attack attribution showed substantial generalization difficulty on unseen feature groups.",
+    "quantum_advantage_claimed": false,
+    "feature_reduction_for_qml": false
+  },
+  "experiment_policy": {
+    "binary_classical_test_closed": true,
+    "multiclass_classical_test_closed": true,
+    "binary_qml_test_closed": true,
+    "multiclass_qml_test_closed": true,
+    "further_tuning_based_on_test_allowed": false
+  }
+}

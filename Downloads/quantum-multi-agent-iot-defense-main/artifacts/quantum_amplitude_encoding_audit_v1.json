@@ -1,0 +1,60 @@
+{
+  "version": "1.0",
+  "encoding_candidate": "amplitude_encoding",
+  "original_feature_count": 27,
+  "qubits": 5,
+  "state_dimension": 32,
+  "padding_dimensions": 5,
+  "binary": {
+    "task": "Binary",
+    "rows_audited": 250000,
+    "original_features": 27,
+    "qubits_required": 5,
+    "amplitude_dimension": 32,
+    "padding_dimensions": 5,
+    "nan_count": 0,
+    "infinite_count": 0,
+    "zero_norm_vectors": 0,
+    "norm_percentiles": {
+      "0": 0.8528837875053399,
+      "1": 0.8959831272747476,
+      "5": 0.8959831272747476,
+      "25": 2.0664196521445986,
+      "50": 2.0664196521445986,
+      "75": 2.0664196521445986,
+      "95": 9.68776329876558,
+      "99": 23.367511302929696,
+      "100": 705.7037887052464
+    },
+    "mean_normalization_error": 2.6407054320998213e-16,
+    "max_normalization_error": 9.992007221626409e-16,
+    "near_zero_fraction": 0.0
+  },
+  "multiclass": {
+    "task": "Multiclass",
+    "rows_audited": 250000,
+    "original_features": 27,
+    "qubits_required": 5,
+    "amplitude_dimension": 32,
+    "padding_dimensions": 5,
+    "nan_count": 0,
+    "infinite_count": 0,
+    "zero_norm_vectors": 0,
+    "norm_percentiles": {
+      "0": 1.2417086660875656,
+      "1": 1.298224408529905,
+      "5": 2.3594518995398954,
+      "25": 2.3594518995398954,
+      "50": 2.3594518995398954,
+      "75": 5.160519301283823,
+      "95": 15.077793631623745,
+      "99": 21.561841394808134,
+      "100": 733.7401889690235
+    },
+    "mean_normalization_error": 2.0995205574081411e-16,
+    "max_normalization_error": 1.2212453270876722e-15,
+    "near_zero_fraction": 0.0
+  },
+  "test_used": false,
+  "decision_status": "Feasibility audit only. Final QML architecture not yet frozen."
+}

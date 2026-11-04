@@ -1,0 +1,19 @@
+{
+  "task": "Multiclass",
+  "model": "Logistic Regression",
+  "purpose": "classical_qml_control",
+  "representation": "27 standardized features -> L2 normalized -> padded to 32",
+  "training_rows": 3200,
+  "validation_rows": 1200,
+  "input_dimension": 32,
+  "accuracy": 0.5775,
+  "balanced_accuracy": 0.5775,
+  "macro_precision": 0.6071653128926544,
+  "macro_recall": 0.5775,
+  "macro_f1": 0.5622215345313997,
+  "weighted_f1": 0.5622215345313998,
+  "training_time_seconds": 0.9793527126312256,
+  "validation_inference_seconds": 0.0008449554443359375,
+  "class_weight": null,
+  "test_used": false
+}

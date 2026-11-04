@@ -1,0 +1,22 @@
+{
+  "model": "Random Forest \u2014 FINAL TEST (threshold=0.23)",
+  "accuracy": 0.9958416678118622,
+  "balanced_accuracy": 0.9894526691069281,
+  "macro_precision": 0.9220902637520982,
+  "macro_recall": 0.9894526691069281,
+  "macro_f1": 0.9531556945563087,
+  "weighted_f1": 0.9959952963479727,
+  "normal_precision": 0.8445509481141904,
+  "normal_recall": 0.9827837051406402,
+  "attack_precision": 0.999629579390006,
+  "attack_recall": 0.9961216330732159,
+  "tn": 4053,
+  "fp": 71,
+  "fn": 746,
+  "tp": 191603,
+  "roc_auc": 0.9995322902312748,
+  "average_precision": 0.9999898580505243,
+  "threshold": 0.23,
+  "test_inference_seconds": 0.9769160747528076,
+  "evaluation_dataset": "untouched_test"
+}

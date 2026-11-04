@@ -1,0 +1,62 @@
+{
+  "phase": "Multiclass QML IDS",
+  "selected_qml_version": "original_v1",
+  "selection_metric": "validation_macro_f1",
+  "selected_validation_macro_f1": 0.5500668760827184,
+  "qml_architecture": {
+    "qubits": 5,
+    "quantum_layers": 3,
+    "classes": 8,
+    "trainable_parameters": 93,
+    "encoding": "AmplitudeEmbedding"
+  },
+  "evaluation_type": "matched_controlled_test",
+  "test_source": "multiclass_test_raw_v1.csv",
+  "test_sampling": {
+    "method": "balanced_without_replacement",
+    "random_state": 42,
+    "per_class": 150,
+    "total": 1200
+  },
+  "input_representation": "27 features -> frozen StandardScaler -> L2 normalization -> pad to 32 -> 5-qubit amplitude encoding",
+  "qml_test_metrics": {
+    "accuracy": 0.38166666666666665,
+    "balanced_accuracy": 0.38166666666666665,
+    "macro_precision": 0.4414051552203754,
+    "macro_recall": 0.38166666666666665,
+    "macro_f1": 0.35046136479981493,
+    "weighted_f1": 0.3504613647998149,
+    "inference_seconds": 10.303301572799683
+  },
+  "classical_controls": {
+    "Logistic Regression": {
+      "accuracy": 0.4275,
+      "balanced_accuracy": 0.4275,
+      "macro_precision": 0.6531807463301254,
+      "macro_recall": 0.4275,
+      "macro_f1": 0.4569502680492947,
+      "weighted_f1": 0.4569502680492947,
+      "inference_seconds": 0.002998828887939453
+    },
+    "Random Forest": {
+      "accuracy": 0.425,
+      "balanced_accuracy": 0.42500000000000004,
+      "macro_precision": 0.40003731551099975,
+      "macro_recall": 0.42500000000000004,
+      "macro_f1": 0.3172967111109697,
+      "weighted_f1": 0.31729671111096974,
+      "inference_seconds": 0.07934236526489258
+    },
+    "Classical MLP": {
+      "accuracy": 0.35,
+      "balanced_accuracy": 0.35,
+      "macro_precision": 0.6265855932321576,
+      "macro_recall": 0.35,
+      "macro_f1": 0.3374002473813639,
+      "weighted_f1": 0.3374002473813639,
+      "inference_seconds": 0.018620014190673828
+    }
+  },
+  "interpretation_policy": "Matched ML-vs-QML comparison uses the same training subset, balanced Test subset, and quantum-ready input representation. Results do not establish quantum advantage.",
+  "tuning_after_test": false
+}

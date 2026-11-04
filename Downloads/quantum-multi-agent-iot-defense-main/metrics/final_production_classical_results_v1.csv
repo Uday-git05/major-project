@@ -1,0 +1,3 @@
+Task,Model,Evaluation,Test Samples,Accuracy,Balanced Accuracy,Macro F1,Notes
+Binary IDS,XGBoost,Full leakage-safe Test,196473,0.9959638220009874,0.981921963133221,0.9537621264524828,Threshold selected only from Validation; Test used after freezing.
+Multiclass IDS,Logistic Regression,Full leakage-safe Test,135294,0.6314988099989652,0.5895652126429498,0.48849554342456725,Model selected using Validation Macro F1.

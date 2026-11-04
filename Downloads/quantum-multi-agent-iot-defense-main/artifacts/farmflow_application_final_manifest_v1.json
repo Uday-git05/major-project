@@ -1,0 +1,152 @@
+{
+  "manifest_version": 1,
+  "project": "FarmFlow Live SOC",
+  "project_version": "1.0.0-final",
+  "application_api_version": "0.1.0",
+  "frozen_at": "2026-09-25T05:31:01Z",
+  "freeze_scope": "Phases 8-16",
+  "feature_contract": {
+    "schema": "feature_schema_v2_reproducible.json",
+    "count": 27,
+    "ordered_names": [
+      "missed_bytes",
+      "orig_pkts",
+      "orig_ip_bytes",
+      "resp_pkts",
+      "resp_ip_bytes",
+      "fwd_pkts_per_sec",
+      "bwd_pkts_per_sec",
+      "flow_pkts_per_sec",
+      "down_up_ratio",
+      "fwd_header_size_tot",
+      "fwd_header_size_min",
+      "fwd_header_size_max",
+      "bwd_header_size_tot",
+      "bwd_header_size_min",
+      "bwd_header_size_max",
+      "fwd_pkts_payload.tot",
+      "fwd_pkts_payload.avg",
+      "bwd_pkts_payload.tot",
+      "bwd_pkts_payload.avg",
+      "flow_pkts_payload.tot",
+      "flow_pkts_payload.avg",
+      "fwd_iat.tot",
+      "fwd_iat.avg",
+      "bwd_iat.tot",
+      "bwd_iat.avg",
+      "flow_iat.tot",
+      "flow_iat.avg"
+    ],
+    "scaling_location": "Phase 8 inference only",
+    "extractor_disclosure": "Deterministic simulator compatibility layer; not an exact reproduction of the source dataset extractor."
+  },
+  "frozen_models": {
+    "classical_binary": {
+      "file": "binary_xgboost_gpu_v1.json",
+      "sha256": "a8c67916541688825560b6a1d0eb3312bbab89649e517afba4405815f797b547",
+      "threshold": 0.012
+    },
+    "classical_multiclass": {
+      "file": "multiclass_logistic_regression_v1.joblib",
+      "sha256": "7a608ed4ded424a5621dfea4302e4f825a830fd7e736e63945aaf422807e69a5",
+      "prediction_rule": "argmax"
+    },
+    "qml_binary": {
+      "file": "binary_qml_amplitude_v1.pt",
+      "sha256": "f97ce94219fb3386b2e381ea6006ebb0cfbe29e17836b1debf8bbc1e19ef4cf2",
+      "threshold": 0.39,
+      "parameter_count": 51
+    },
+    "qml_multiclass": {
+      "file": "multiclass_qml_selected_final_v1.pt",
+      "sha256": "53e2de4806031f5511e655c8dd3812ff235217c2ed17f155d1aa02b29fade87d",
+      "prediction_rule": "argmax",
+      "parameter_count": 93
+    }
+  },
+  "frozen_preprocessing": {
+    "binary_scaler": "binary_standard_scaler_v1.joblib",
+    "multiclass_scaler": "multiclass_standard_scaler_v1.joblib",
+    "qml_sequence": [
+      "ordered 27 features",
+      "corresponding TRAIN-fitted StandardScaler",
+      "L2 normalization",
+      "zero-pad 27 to 32",
+      "AmplitudeEmbedding on 5 qubits"
+    ]
+  },
+  "agents": [
+    "MonitoringAgent",
+    "ClassicalMLAgent",
+    "QuantumMLAgent",
+    "ThreatAnalysisAgent",
+    "DefenseAgent",
+    "RecoveryAgent"
+  ],
+  "supported_attacks": [
+    "Arp_Spoofing",
+    "HTTP_Flood",
+    "ICMP_Flood",
+    "MQTT_Flood",
+    "Port_Scanning",
+    "TCP_Flood",
+    "UDP_Flood"
+  ],
+  "supported_defense_actions": [
+    "isolate_virtual_device",
+    "quarantine_synthetic_source",
+    "rate_limit_virtual_service",
+    "restrict_virtual_port",
+    "protect_gateway_mode",
+    "restore_normal_policy"
+  ],
+  "technology": {
+    "backend": ["Python", "FastAPI", "Pydantic", "asyncio", "PennyLane", "PyTorch", "XGBoost", "scikit-learn"],
+    "frontend": ["Next.js", "React", "TypeScript", "Vitest", "Recharts"],
+    "live_delivery": "bounded per-client WebSocket queues plus authoritative snapshots"
+  },
+  "final_tests": {
+    "backend": {"total": 104, "passed": 104, "failed": 0},
+    "frontend": {"total": 17, "passed": 17, "failed": 0},
+    "python_compilation": "passed",
+    "typescript_typecheck": "passed",
+    "eslint": "passed",
+    "production_build": "passed",
+    "npm_audit_high": "0 vulnerabilities"
+  },
+  "validation": {
+    "results_file": "phase16_validation_results_v1.json",
+    "artifact_integrity": "passed",
+    "lifecycle_cycles": 3,
+    "normal_soak_ticks": 50,
+    "all_seven_attacks_executed": true,
+    "mixed_attack_correlation": "passed",
+    "qml_degradation": "passed",
+    "reset_cleanup": "passed",
+    "human_overrides": "passed",
+    "bounded_queues_and_histories": "passed",
+    "browser_viewports": ["1920x1080", "1440x900", "1366x768"]
+  },
+  "safety": {
+    "scope": "in-memory simulator only",
+    "external_attack_traffic": false,
+    "physical_device_control": false,
+    "firewall_or_route_modification": false,
+    "raw_sockets_or_scapy_or_nmap": false
+  },
+  "qml_disclosure": {
+    "preferred_device": "lightning.qubit",
+    "validated_device": "default.qubit",
+    "reason": "lightning.qubit was unavailable in the validation environment",
+    "quantum_hardware_used": false,
+    "quantum_advantage_claimed": false
+  },
+  "known_limitations": [
+    "Compatibility-layer normal traffic produced substantial false-positive-style frozen-model detections during the 50-tick soak.",
+    "Multiclass attributions are tentative and may differ from simulator ground truth.",
+    "QML latency is higher than classical latency and evidence arrives asynchronously.",
+    "Runtime state is in memory and is not durable across backend restarts.",
+    "This is not a formal model-accuracy evaluation or a production IDS."
+  ],
+  "status": "ready_for_manual_human_acceptance_testing"
+}

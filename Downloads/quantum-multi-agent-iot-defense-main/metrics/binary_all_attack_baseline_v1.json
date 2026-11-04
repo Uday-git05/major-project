@@ -1,0 +1,19 @@
+{
+  "model": "All-Attack Baseline",
+  "accuracy": 0.9790353939961521,
+  "balanced_accuracy": 0.5,
+  "macro_precision": 0.48951769699807607,
+  "macro_recall": 0.5,
+  "macro_f1": 0.494703327169527,
+  "weighted_f1": 0.9686641336532503,
+  "normal_precision": 0.0,
+  "normal_recall": 0.0,
+  "attack_precision": 0.9790353939961521,
+  "attack_recall": 1.0,
+  "tn": 0,
+  "fp": 4119,
+  "fn": 0,
+  "tp": 192355,
+  "roc_auc": null,
+  "average_precision": null
+}

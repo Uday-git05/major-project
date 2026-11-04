@@ -1,0 +1,18 @@
+{
+  "phase": "Classical Binary IDS",
+  "feature_schema": "feature_schema_v2_reproducible.json",
+  "feature_count": 27,
+  "test_rows": 196473,
+  "selection_metric": "validation_macro_f1",
+  "random_forest": {
+    "threshold": 0.23,
+    "validation_macro_f1": 0.953819,
+    "test_macro_f1": 0.9531556945563087
+  },
+  "xgboost": {
+    "threshold": 0.012,
+    "validation_macro_f1": 0.955406,
+    "test_macro_f1": 0.9537621264524828
+  },
+  "test_policy": "Test used once after model and threshold selection."
+}

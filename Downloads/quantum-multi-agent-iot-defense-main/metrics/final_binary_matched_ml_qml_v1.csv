@@ -1,0 +1,5 @@
+task,model,accuracy,balanced_accuracy,macro_f1,attack_precision,attack_recall,inference_seconds,evaluation,train_samples,test_samples
+Binary IDS,Logistic Regression,0.883,0.883,0.8813761582300106,1.0,0.766,0.0039048194885253,Matched balanced Test subset,3000,1000
+Binary IDS,Random Forest,0.993,0.993,0.9929996569831924,1.0,0.986,0.1599960327148437,Matched balanced Test subset,3000,1000
+Binary IDS,Classical MLP,0.934,0.934,0.9337112461883968,1.0,0.868,0.0008821487426757,Matched balanced Test subset,3000,1000
+Binary IDS,5-Qubit QML,0.961,0.961,0.960962484948035,0.9914712153518124,0.93,12.145145893096924,Matched balanced Test subset,3000,1000

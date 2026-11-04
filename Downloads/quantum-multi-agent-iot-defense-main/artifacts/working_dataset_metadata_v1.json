@@ -1,0 +1,23 @@
+{
+  "source": "Farm-Flows.csv",
+  "output": "farmflow_working_raw_v1.csv",
+  "raw_rows": 1309887,
+  "output_rows": 1309823,
+  "excluded": {
+    "BotNet_DDOS": 64
+  },
+  "feature_count_current": 27,
+  "engineered_features_status": "pending exact formula verification",
+  "missing_values": 0,
+  "infinite_values": 0,
+  "traffic_mapping": {
+    "0": "Arp_Spoofing",
+    "1": "HTTP_Flood",
+    "2": "ICMP_Flood",
+    "3": "MQTT_Flood",
+    "4": "Normal",
+    "5": "Port_Scanning",
+    "6": "TCP_Flood",
+    "7": "UDP_Flood"
+  }
+}
